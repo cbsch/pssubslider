@@ -16,9 +16,7 @@ Function Main() {
         }
     }
 
-    return $out
-
-    $out | Out-Content newsub.srt -Encoding utf8
+    $out | Out-File newsub.srt -Encoding utf8
 }
 
 Function Convert-TimeStampLine {
