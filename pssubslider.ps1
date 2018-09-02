@@ -33,7 +33,7 @@ Function Convert-TimeStampLine {
 
 Function Convert-TimeStamp($Timestamp) {
     $date = [DateTime]::ParseExact($Timestamp, 'HH:mm:ss,fff', [cultureinfo]::InvariantCulture)
-    $date = $date.AddMilliseconds($Offset)
+    $date = $date.AddMilliseconds($OffsetMilliseconds)
     return $date.ToString('HH:mm:ss,fff')
 }
 
